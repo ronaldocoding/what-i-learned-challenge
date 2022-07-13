@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_what_i_learned.xml" value="0.22" />
+        <entry key="app/src/main/res/drawable/ic_cold_face.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/ic_nerd_face.xml" value="0.101" />
+        <entry key="app/src/main/res/drawable/ic_smiling_face_with_sunglasses.xml" value="0.101" />
+        <entry key="app/src/main/res/layout/activity_what_i_learned.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_what_i_learned.xml" value="0.25" />
       </map>
     </option>
   </component>
