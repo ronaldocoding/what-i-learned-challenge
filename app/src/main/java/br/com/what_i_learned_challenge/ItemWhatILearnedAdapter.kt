@@ -8,8 +8,10 @@ import br.com.what_i_learned_challenge.databinding.ItemWhatILearnedBinding
 
 class ItemWhatILearnedAdapter(
     private val context: Context,
-    private val whatILearnedList: List<ItemWhatILearned>
+    whatILearnedList: List<ItemWhatILearned>
 ) : RecyclerView.Adapter<ItemWhatILearnedAdapter.ViewHolder>() {
+
+    private val items = whatILearnedList.toMutableList()
 
     class ViewHolder(binding: ItemWhatILearnedBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -39,9 +41,15 @@ class ItemWhatILearnedAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(whatILearnedList[position])
+        holder.bind(items[position])
     }
 
-    override fun getItemCount(): Int = whatILearnedList.size
+    override fun getItemCount(): Int = items.size
+
+    fun update(items: List<ItemWhatILearned>) {
+        this.items.clear()
+        this.items.addAll(items)
+        notifyDataSetChanged()
+    }
 
 }
